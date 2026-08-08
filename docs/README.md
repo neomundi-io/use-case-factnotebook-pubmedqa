@@ -40,7 +40,7 @@ The pilot documents three distinct functions:
 → produces and reports runtime behavioral observations.
 
 **FactNotebook**  
-→ consumes available observations and reconstructs evidence and governance objects under a declared policy.
+→ consumes available observations and reconstructs evidence objects under a declared policy.
 
 **Human authority**  
 → retains the final assurance decision.
@@ -49,7 +49,7 @@ The runtime measurement is therefore an observation layer, not a final verdict.
 
 ### Scope
 
-This documentation describes the **integration experience, exported data surface and downstream reconstruction**.
+This documentation describes the **integration experience, exported data surface and downstream evidence reconstruction**.
 
 It does not disclose NeoMundi's internal measurement mechanisms, proprietary implementation logic or internal computation methods.
 
@@ -98,7 +98,7 @@ Le pilote documente trois fonctions distinctes :
 → produit et rapporte des observations comportementales runtime.
 
 **FactNotebook**  
-→ consomme les observations disponibles et reconstruit des objets de preuve et de gouvernance sous politique déclarée.
+→ consomme les observations disponibles et reconstruit des objets de preuve sous politique déclarée.
 
 **Autorité humaine**  
 → conserve la décision finale d'assurance.
@@ -107,7 +107,7 @@ La mesure runtime constitue donc une couche d'observation, et non un verdict fin
 
 ## Périmètre
 
-Cette documentation décrit **l'expérience d'intégration, la surface de données exportée et la reconstruction réalisée en aval**.
+Cette documentation décrit **l'expérience d'intégration, la surface de données exportée et la reconstruction de preuve réalisée en aval**.
 
 Elle ne décrit pas les mécanismes internes de mesure de NeoMundi, sa logique d'implémentation propriétaire ni ses méthodes internes de calcul.
 
