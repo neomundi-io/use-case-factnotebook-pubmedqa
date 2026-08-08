@@ -12,7 +12,7 @@
 
 NeoMundi measured the runtime behavior of **5 GPT-4o generations on PubMedQA**.
 
-Those runtime observations were exported in JSONL and independently ingested by **FactNotebook**, which used them to reconstruct governance and evidence objects.
+Those runtime observations were exported in JSONL and independently ingested by **FactNotebook**, which used them to reconstruct evidence objects.
 
 ### What this shows
 
@@ -25,6 +25,8 @@ This pilot provides evidence that:
 
 **In simple terms: NeoMundi measures. FactNotebook reconstructs evidence. A human authority decides.**
 
+FactNotebook's role is described here in terms of **evidence and evidence objects**, with assurance remaining a distinct downstream decision layer.
+
 This is a completed interoperability pilot, not a claim of universal interoperability.
 
 ---
@@ -33,7 +35,7 @@ This is a completed interoperability pilot, not a claim of universal interoperab
 
 This repository documents a completed interoperability pilot between **NeoMundi ControlTower** and **FactNotebook**.
 
-The experiment examines whether runtime observations produced by NeoMundi can be consumed by an independent third-party infrastructure to reconstruct governance and evidence objects while preserving a clear separation of responsibilities.
+The experiment examines whether runtime observations produced by NeoMundi can be consumed by an independent third-party infrastructure to reconstruct evidence objects while preserving a clear separation of responsibilities.
 
 The pilot covers **5 PubMedQA generations produced with GPT-4o-2024-11-20**.
 
@@ -61,7 +63,7 @@ The final assurance decision remains outside both measurement and evidence recon
 
 ## Use case
 
-FactNotebook reconstructs governance and assurance objects from available evidence.
+FactNotebook reconstructs evidence and assurance objects from available evidence.
 
 Without an independent runtime source, this reconstruction would rely primarily on information reported by the system being evaluated.
 
@@ -82,7 +84,7 @@ The objective was not to merge both infrastructures, but to test whether they co
 - **Export format:** JSONL
 - **Integration:** dedicated FactNotebook connector
 
-The JSONL export contained runtime signals, governance outputs, trace identifiers, timestamps and associated metadata.
+The JSONL export contained runtime signals, runtime outputs, trace identifiers, timestamps and associated metadata.
 
 FactNotebook reported that ingestion was deterministic and required no manual reprocessing.
 
@@ -92,7 +94,7 @@ FactNotebook reported that ingestion was deterministic and required no manual re
 |---|---|
 | AI system | Produces the generation |
 | NeoMundi | Measures and reports runtime behavior |
-| FactNotebook | Reconstructs evidence and governance objects |
+| FactNotebook | Reconstructs evidence objects |
 | Human authority | Makes the final assurance decision |
 
 Runtime measurement reports what was observed.
@@ -105,7 +107,7 @@ The pilot showed that:
 
 - NeoMundi runtime exports could be ingested by an independent infrastructure;
 - observations could be associated with individual generations;
-- FactNotebook could reconstruct governance objects without producing the runtime measurements itself;
+- FactNotebook could reconstruct evidence objects without producing the runtime measurements itself;
 - NeoMundi and FactNotebook retained distinct functional roles;
 - runtime observations could contribute an independent evidence source beyond model self-reporting.
 
@@ -117,7 +119,7 @@ A NeoMundi overclaim flag was consumed by FactNotebook as an independent runtime
 
 FactNotebook used this observation when reconstructing an Article 15-related governance tension without implementing its own runtime detector.
 
-> **NeoMundi produces behavioral observations. FactNotebook transforms observations into evidence and governance objects.**
+> **NeoMundi produces behavioral observations. FactNotebook transforms observations into evidence objects.**
 
 ## What this pilot does — and does not — establish
 
@@ -204,7 +206,7 @@ Further replication is required before broader generalisation.
 
 NeoMundi a mesuré le comportement runtime de **5 générations GPT-4o sur PubMedQA**.
 
-Ces observations runtime ont été exportées en JSONL puis ingérées indépendamment par **FactNotebook**, qui les a utilisées pour reconstruire des objets de gouvernance et de preuve.
+Ces observations runtime ont été exportées en JSONL puis ingérées indépendamment par **FactNotebook**, qui les a utilisées pour reconstruire des objets de preuve.
 
 ### Ce que cela montre
 
@@ -217,6 +219,8 @@ Ce pilote apporte des éléments montrant que :
 
 **En termes simples : NeoMundi mesure. FactNotebook reconstruit la preuve. Une autorité humaine décide.**
 
+Le rôle de FactNotebook est décrit ici en termes de **preuve et d’objets de preuve**, l’assurance restant une couche de décision distincte en aval.
+
 Il s’agit d’un pilote d’interopérabilité terminé, et non d’une démonstration d’interopérabilité universelle.
 
 ---
@@ -225,7 +229,7 @@ Il s’agit d’un pilote d’interopérabilité terminé, et non d’une démon
 
 Ce dépôt documente un pilote d’interopérabilité terminé entre **NeoMundi ControlTower** et **FactNotebook**.
 
-L’expérience examine si des observations runtime produites par NeoMundi peuvent être consommées par une infrastructure tierce indépendante afin de reconstruire des objets de gouvernance et de preuve, tout en maintenant une séparation claire des responsabilités.
+L’expérience examine si des observations runtime produites par NeoMundi peuvent être consommées par une infrastructure tierce indépendante afin de reconstruire des objets de preuve, tout en maintenant une séparation claire des responsabilités.
 
 Le pilote porte sur **5 générations PubMedQA produites avec GPT-4o-2024-11-20**.
 
@@ -253,7 +257,7 @@ La décision finale d’assurance reste distincte de la mesure et de la reconstr
 
 ## Cas d’usage
 
-FactNotebook reconstruit des objets de gouvernance et d’assurance à partir des éléments de preuve disponibles.
+FactNotebook reconstruit des objets de preuve et d’assurance à partir des éléments de preuve disponibles.
 
 Sans source runtime indépendante, cette reconstruction reposerait principalement sur les informations déclarées par le système évalué.
 
@@ -274,7 +278,7 @@ L’objectif n’était pas de fusionner les deux infrastructures, mais de teste
 - **Format d’export :** JSONL
 - **Intégration :** connecteur FactNotebook dédié
 
-L’export JSONL contenait des signaux runtime, des sorties de gouvernance, des identifiants de trace, des horodatages et les métadonnées associées.
+L’export JSONL contenait des signaux runtime, des sorties runtime, des identifiants de trace, des horodatages et les métadonnées associées.
 
 FactNotebook indique que l’ingestion a été déterministe et n’a nécessité aucun retraitement manuel.
 
@@ -284,7 +288,7 @@ FactNotebook indique que l’ingestion a été déterministe et n’a nécessit�
 |---|---|
 | Système IA | Produit la génération |
 | NeoMundi | Mesure et rapporte le comportement runtime |
-| FactNotebook | Reconstruit les objets de preuve et de gouvernance |
+| FactNotebook | Reconstruit des objets de preuve |
 | Autorité humaine | Prend la décision finale d’assurance |
 
 La mesure runtime rapporte ce qui a été observé.
@@ -297,7 +301,7 @@ Le pilote montre que :
 
 - les exports runtime NeoMundi ont pu être ingérés par une infrastructure indépendante ;
 - les observations ont pu être rattachées à des générations individuelles ;
-- FactNotebook a pu reconstruire des objets de gouvernance sans produire lui-même les mesures runtime ;
+- FactNotebook a pu reconstruire des objets de preuve sans produire lui-même les mesures runtime ;
 - NeoMundi et FactNotebook ont conservé des rôles fonctionnels distincts ;
 - les observations runtime ont pu constituer une source d’information indépendante au-delà de l’auto-déclaration du modèle.
 
@@ -309,7 +313,7 @@ Un flag NeoMundi de sur-affirmation a été consommé par FactNotebook comme obs
 
 FactNotebook a utilisé cette observation pour reconstruire une tension liée à l’Article 15 sans implémenter son propre détecteur runtime.
 
-> **NeoMundi produit des observations comportementales. FactNotebook transforme ces observations en objets de preuve et de gouvernance.**
+> **NeoMundi produit des observations comportementales. FactNotebook transforme ces observations en objets de preuve.**
 
 ## Ce que ce pilote établit — et n’établit pas
 
