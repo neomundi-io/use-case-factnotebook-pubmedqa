@@ -176,6 +176,9 @@ The repository is intended to make the experiment **inspectable**, not to expose
 
 ### FactNotebook
 
+**Patrick Juvet Etoua** — Researching evidence-based AI governance. Building FactNotebook. Author of Governance Falsifiability Infrastructure.  
+[LinkedIn](https://www.linkedin.com/in/patrick-juvet-etoua-697847a3/)
+
 - [Public report — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/)
 - [Public report — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/index.fr.html)
 - [Detailed evidence review — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.html)
