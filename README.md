@@ -174,13 +174,23 @@ The repository is intended to make the experiment **inspectable**, not to expose
 
 ## Public reports
 
+## Status
+
+**Completed and publicly documented interoperability pilot.**
+
+The results provide evidence that an independent third-party infrastructure can consume NeoMundi runtime observations while both systems retain their own architecture, function and authority.
+
+Further replication is required before broader generalisation.
+
+## Ressource
+
 ### FactNotebook
 
 **Patrick Juvet Etoua** — Researching evidence-based AI governance. Building FactNotebook. Author of Governance Falsifiability Infrastructure.  
 [LinkedIn](https://www.linkedin.com/in/patrick-juvet-etoua-697847a3/)
 
-- [Public report — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/)
-- [Public report — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/index.fr.html)
+- [Rapport public — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/)
+- [Rapport public — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/index.fr.html)
 - [Detailed evidence review — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.html)
 - [Revue détaillée — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.fr.html)
 
@@ -190,14 +200,6 @@ The repository is intended to make the experiment **inspectable**, not to expose
 - [ControlTower](https://controltower.neomundi.io/welcome)
 - [Runtime Interoperability Contract](https://github.com/neomundi-io/runtime-interoperability-contract)
 - [NeoMundi AI Observatory](https://github.com/neomundi-io/neomundi-ai-observatory)
-
-## Status
-
-**Completed and publicly documented interoperability pilot.**
-
-The results provide evidence that an independent third-party infrastructure can consume NeoMundi runtime observations while both systems retain their own architecture, function and authority.
-
-Further replication is required before broader generalisation.
 
 ---
 
@@ -369,7 +371,19 @@ Le pilote doit donc être interprété comme une expérience d’intégration te
 
 Le dépôt vise à rendre l’expérience **inspectable**, sans exposer les mécanismes internes propriétaires de mesure de NeoMundi.
 
-## Rapports publics
+---
+
+## Statut
+
+**Pilote d’interopérabilité terminé et documenté publiquement.**
+
+Les résultats apportent des éléments montrant qu’une infrastructure tierce indépendante peut consommer des observations runtime NeoMundi tout en maintenant, de part et d’autre, une architecture, une fonction et une autorité distinctes.
+
+Des réplications supplémentaires sont nécessaires avant toute généralisation plus large.
+
+---
+
+## Ressource
 
 ### FactNotebook
 
@@ -388,10 +402,4 @@ Le dépôt vise à rendre l’expérience **inspectable**, sans exposer les méc
 - [Runtime Interoperability Contract](https://github.com/neomundi-io/runtime-interoperability-contract)
 - [NeoMundi AI Observatory](https://github.com/neomundi-io/neomundi-ai-observatory)
 
-## Statut
 
-**Pilote d’interopérabilité terminé et documenté publiquement.**
-
-Les résultats apportent des éléments montrant qu’une infrastructure tierce indépendante peut consommer des observations runtime NeoMundi tout en maintenant, de part et d’autre, une architecture, une fonction et une autorité distinctes.
-
-Des réplications supplémentaires sont nécessaires avant toute généralisation plus large.
