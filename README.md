@@ -370,6 +370,9 @@ Le dépôt vise à rendre l’expérience **inspectable**, sans exposer les méc
 
 ### FactNotebook
 
+**Patrick Juvet Etoua** — Researching evidence-based AI governance. Building FactNotebook. Author of Governance Falsifiability Infrastructure.  
+[LinkedIn](https://www.linkedin.com/in/patrick-juvet-etoua-697847a3/)
+
 - [Rapport public — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/)
 - [Rapport public — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/index.fr.html)
 - [Detailed evidence review — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.html)
