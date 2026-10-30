@@ -1,413 +1,162 @@
-# FactNotebook × NeoMundi
+# FactNotebook × NeoMundi — Bounded evidence reconstruction
 
-**Independent evidence reconstruction from NeoMundi runtime measurements — PubMedQA pilot.**
+**Five runtime observations. One independent reconstruction. Separate authority.**
 
-[🇫🇷 Lire en français](#version-française)
+NeoMundi measured five requested GPT-4o generations on a PubMedQA mini-panel and exported the runtime records as JSONL. FactNotebook ingested those records and reconstructed what the available observations could support.
 
----
+> **NeoMundi measures. FactNotebook reconstructs evidence. An accountable human authority decides.**
+
+[Français](#version-française)
+
+## Explore NeoMundi
+
+[![Station — Observe & experiment](https://img.shields.io/badge/Station-Observe_%26_experiment-7c3aed?style=flat-square)](https://github.com/neomundi-io/neomundi-station-public)
+[![Runtime Measurement — Measure & integrate](https://img.shields.io/badge/Runtime_Measurement-Measure_%26_integrate-2563eb?style=flat-square)](https://github.com/neomundi-io/neomundi-runtime-measurement)
+[![Use Cases — Applications, pilots & evidence](https://img.shields.io/badge/Use_Cases-Applications%2C_pilots_%26_evidence-059669?style=flat-square)](https://github.com/neomundi-io/neomundi-use-cases)
+[![Create an Account — ControlTower](https://img.shields.io/badge/Create_an_Account-ControlTower-ea580c?style=flat-square)](https://controltower.neomundi.io/welcome)
 
 # English
 
-## What happened here?
+## At a glance
 
-NeoMundi measured the runtime behavior of **5 GPT-4o generations on PubMedQA**.
+| Question | Answer |
+| --- | --- |
+| What did NeoMundi measure? | Runtime behavior for five requested GPT-4o-2024-11-20 generations on a five-case PubMedQA mini-panel. |
+| What was exported? | Five successful JSONL runtime records; zero error rows were recorded. |
+| What did FactNotebook do? | It ingested the export and produced an independent retrospective evidence reconstruction. |
+| Who decides? | Neither measurement nor reconstruction grants authority. The accountable human authority decides. |
+| Status | Completed, bounded historical interoperability experiment. Further replication is required. |
 
-Those runtime observations were exported in JSONL and independently ingested by **FactNotebook**, which used them to reconstruct evidence objects.
+## Historical experiment
 
-### What this shows
+The preserved run used five PubMedQA cases, requested model GPT-4o-2024-11-20, workflow **stream_then_govern_v3**, and CSV/JSONL exports. Five rows were saved successfully and no error row was recorded. The artifact name dates the run to 25 July 2026.
 
-This pilot provides evidence that:
+The requested model identity was declared but not independently confirmed. This repository preserves the experiment as run; it does not retroactively apply later RGC contracts or semantics.
 
-* a third-party infrastructure can consume NeoMundi runtime measurements;
-* the downstream system does not need to reproduce NeoMundi's measurement function;
-* NeoMundi and FactNotebook can remain technically and functionally independent;
-* runtime observations can become an independent evidence source for downstream governance.
+## Responsibility boundaries
 
-**In simple terms: NeoMundi measures. FactNotebook reconstructs evidence. A human authority decides.**
+| Layer | Responsibility |
+| --- | --- |
+| AI system | Produces the generation. |
+| NeoMundi | Measures and reports runtime behavior. |
+| FactNotebook | Reconstructs what the available observations permit a third party to establish. |
+| Accountable human authority | Interprets the evidence and makes any assurance or governance decision. |
 
-FactNotebook's role is described here in terms of **evidence and evidence objects**, with assurance remaining a distinct downstream decision layer.
+## What the five observations demonstrate
 
-This is a completed interoperability pilot, not a claim of universal interoperability.
+Within this experiment, the public artifacts show that five NeoMundi runtime records were produced, associated with the five panel cases and exported as JSONL. The dedicated FactNotebook integration consumed that export without reproducing NeoMundi's measurement function. Both systems retained separate functions and authority.
 
----
+This demonstrates a bounded interoperability path—not universal interoperability, measurement validity or production readiness.
 
-## Overview
+## What the partner reconstruction adds
 
-This repository documents a completed interoperability pilot between **NeoMundi ControlTower** and **FactNotebook**.
+FactNotebook published the specific entry [**FN-NEOMUNDI-CTPUBMEDQA-001**](https://github.com/factnotebook/public-reconstructions/tree/main/FN-NEOMUNDI-CTPUBMEDQA-001).
 
-The experiment examines whether runtime observations produced by NeoMundi can be consumed by an independent third-party infrastructure to reconstruct evidence objects while preserving a clear separation of responsibilities.
+It adds a retrospective declared-versus-observed reconstruction, preserves **NOT ASSESSABLE** when no observation channel exists, publishes SHA-256 commitments for non-public package content, and provides RFC-3161 timestamp tokens for the ingest boundary and manifest.
 
-The pilot covers **5 PubMedQA generations produced with GPT-4o-2024-11-20**.
+FactNotebook's historical **8/9 (89%) evidentiary-weight estimate** belongs to FactNotebook's reconstruction methodology. It is not a NeoMundi metric, score or measurement result. The linked entry—not the whole partner registry—is the relevant partner evidence.
 
-## Architecture
+## Inspectable evidence
 
-```
-AI generation
-     ↓
-NeoMundi ControlTower
-runtime measurement
-     ↓
-JSONL export
-     ↓
-FactNotebook
-evidence reconstruction
-     ↓
-evidence flow
-     ↓
-human authority
-assurance decision
-```
+### NeoMundi repository
 
-**NeoMundi measures runtime behavior.**
+- [Five-case panel](./data/panel/)
+- [Runtime exports](./data/runtime/)
+- [Run summary](./data/runtime/openai_gpt-4o-2024-11-20_factnotebook_pubmedqa_pilot_v01_20260725T181548Z_summary.json)
+- [Integration feedback](./docs/neomundi_pilot_integration_feedback.pdf)
+- [Data guide](./data/README.md)
+- [Documentation guide](./docs/README.md)
 
-**FactNotebook reconstructs what a third party can legitimately establish from the available observations.**
+### Partner entry
 
-The final assurance decision remains outside both measurement and evidence reconstruction.
+The partner entry exposes its README, manifest, SHA256SUMS, and the **ingest.tsr** and **manifest.tsr** RFC-3161 tokens. It publishes reconstruction outputs and commitments, not its reconstruction engine, models or reading rules. The complete FactNotebook reconstruction therefore cannot be rerun independently from the published materials.
 
-## Use case
+## Integrity and timestamp limits
 
-FactNotebook reconstructs **evidence objects** from available observations and evidence.
+The partner manifest is explicitly **unsigned**. Hashes of non-public artifacts are commitments, not disclosures. RFC-3161 attests that a blob existed at a time—not what it means or whether its claims are true. The published package establishes neither immutability nor counter-signature, and its stated integrity begins only from generation time.
 
-Without an independent runtime source, this reconstruction would rely primarily on information reported by the system being evaluated.
+## What this does not establish
 
-In this pilot, NeoMundi supplied runtime observations that FactNotebook could ingest as an independent evidence source.
+The pilot does not establish medical truth, general model validity, independent confirmation of every metadata field, universal validity of NeoMundi measurements, independent reproducibility of FactNotebook's reconstruction, certification, regulatory compliance, assurance, production readiness, or execution permission. Later RGC contracts are not applied retroactively.
 
-The objective was not to merge both infrastructures, but to test whether they could interoperate while retaining distinct functions and responsibilities.
+## Reports
 
-## Experiment
-
-* **Partner infrastructure:** FactNotebook
-* **Measurement layer:** NeoMundi ControlTower
-* **Dataset:** PubMedQA mini-panel
-* **Model:** GPT-4o-2024-11-20
-* **Cases:** 5
-* **Workflow:** `stream_then_govern_v3`
-* **Successful observations:** 5 / 5
-* **Error rows:** 0
-* **Export format:** JSONL
-* **Integration:** dedicated FactNotebook connector
-
-The JSONL export contained runtime signals, runtime outputs, trace identifiers, timestamps and associated metadata.
-
-FactNotebook reported that ingestion was deterministic and required no manual reprocessing.
-
-## Responsibility separation
-
-| Layer           | Responsibility                        |
-| --------------- | ------------------------------------- |
-| AI system       | Produces the generation               |
-| NeoMundi        | Measures and reports runtime behavior |
-| FactNotebook    | Reconstructs evidence objects         |
-| Human authority | Makes the final assurance decision    |
-
-Runtime measurement reports what was observed.
-
-It does not, by itself, constitute a final verdict.
-
-## Observed interoperability
-
-The pilot showed that:
-
-* NeoMundi runtime exports could be ingested by an independent infrastructure;
-* observations could be associated with individual generations;
-* FactNotebook could reconstruct evidence objects without producing the runtime measurements itself;
-* NeoMundi and FactNotebook retained distinct functional roles;
-* runtime observations could contribute an independent evidence source beyond model self-reporting.
-
-FactNotebook estimated that **8/9 (89%) of the evidentiary weight** used in its reconstruction came from an independent witness rather than model self-reporting.
-
-## Concrete example
-
-A NeoMundi overclaim flag was consumed by FactNotebook as an independent runtime observation.
-
-FactNotebook used this observation when reconstructing an Article 15-related governance tension without implementing its own runtime detector.
-
-> **NeoMundi produces behavioral observations. FactNotebook transforms observations into evidence objects.**
-
-## What this pilot does — and does not — establish
-
-### It establishes, within this experiment
-
-* successful ingestion of NeoMundi runtime exports by FactNotebook;
-* deterministic downstream processing without manual reprocessing;
-* preservation of distinct functional responsibilities;
-* use of NeoMundi runtime observations as an independent evidentiary source;
-* technical articulation between measurement and downstream evidence reconstruction.
-
-### It does not establish
-
-* universal interoperability across all infrastructures;
-* universal validity of the NeoMundi measurement layer;
-* independent confirmation of every metadata field;
-* a final assurance verdict produced by NeoMundi;
-* generalisation beyond this pilot without further replication.
-
-## Limitations
-
-The experiment identified several limitations:
-
-* model identity was declared but not independently confirmed;
-* some field semantics still required interpretation;
-* `severity`, `category` and certain thresholds required clearer documentation;
-* no downstream human-supervision event was included in the runtime export;
-* some timestamps could be absent;
-* a versioned interoperability schema was still required at the time of the pilot.
-
-The pilot should therefore be interpreted as a completed integration experiment requiring further replication before broader generalisation.
-
-## Repository contents
-
-```
-.
-├── README.md
-├── data/
-│   ├── README.md
-│   ├── panel/
-│   │   ├── README.md
-│   │   └── PubMedQA pilot input files
-│   └── runtime/
-│       ├── README.md
-│       ├── results.csv
-│       ├── results.jsonl
-│       └── summary.json
-└── docs/
-    ├── README.md
-    └── neomundi_pilot_integration_feedback.pdf
-```
-
-The repository is intended to make the experiment **inspectable**, not to expose NeoMundi's proprietary internal measurement mechanisms.
-
-## Public reports
-
-## Status
-
-**Completed and publicly documented interoperability pilot.**
-
-The results provide evidence that an independent third-party infrastructure can consume NeoMundi runtime observations while both systems retain their own architecture, function and authority.
-
-Further replication is required before broader generalisation.
-
-## Ressource
-
-### FactNotebook
-
-**Patrick Juvet Etoua** — Researching evidence-based AI governance. Building FactNotebook. Author of Governance Falsifiability Infrastructure.
-[LinkedIn](https://www.linkedin.com/in/patrick-juvet-etoua-697847a3/)
-
-* [Rapport public — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/)
-* [Rapport public — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/index.fr.html)
-* [Detailed evidence review — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.html)
-* [Revue détaillée — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.fr.html)
-
-### NeoMundi
-
-* [NeoMundi Research](https://neomundi.org)
-* [ControlTower](https://controltower.neomundi.io/welcome)
-* [Runtime Interoperability Contract](https://github.com/neomundi-io/runtime-interoperability-contract)
-* [NeoMundi AI Observatory](https://github.com/neomundi-io/neomundi-ai-observatory)
+- [Partner reconstruction entry](https://github.com/factnotebook/public-reconstructions/tree/main/FN-NEOMUNDI-CTPUBMEDQA-001)
+- [Public report — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/)
+- [Rapport public — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/index.fr.html)
+- [Detailed review — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.html)
+- [Revue détaillée — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.fr.html)
 
 ---
 
 # Version française
 
-[🇬🇧 Back to English](#english)
+## En bref
 
-## Qu’est-ce qui a été fait ici ?
+| Question | Réponse |
+| --- | --- |
+| Qu'a mesuré NeoMundi ? | Le comportement runtime de cinq générations demandées à GPT-4o-2024-11-20 sur un mini-panel PubMedQA de cinq cas. |
+| Qu'est-ce qui a été exporté ? | Cinq enregistrements runtime JSONL réussis ; aucune ligne en erreur n'a été enregistrée. |
+| Qu'a fait FactNotebook ? | FactNotebook a ingéré l'export et produit une reconstruction rétrospective indépendante de la preuve. |
+| Qui décide ? | Ni la mesure ni la reconstruction n'accordent d'autorité. L'autorité humaine responsable décide. |
+| Statut | Expérience historique d'interopérabilité terminée et bornée. Des réplications restent nécessaires. |
 
-NeoMundi a mesuré le comportement runtime de **5 générations GPT-4o sur PubMedQA**.
+## Expérience historique
 
-Ces observations runtime ont été exportées en JSONL puis ingérées indépendamment par **FactNotebook**, qui les a utilisées pour reconstruire des objets de preuve.
+Le run conservé utilisait cinq cas PubMedQA, le modèle demandé GPT-4o-2024-11-20, le workflow **stream_then_govern_v3**, et des exports CSV/JSONL. Cinq lignes ont été sauvegardées avec succès et aucune ligne en erreur n'a été enregistrée. Le nom de l'artefact date le run du 25 juillet 2026.
 
-### Ce que cela montre
+L'identité du modèle demandé était déclarée mais n'a pas été confirmée indépendamment. Ce dépôt conserve l'expérience telle qu'elle a été exécutée ; il ne lui applique pas rétroactivement les contrats ou la sémantique RGC ultérieurs.
 
-Ce pilote apporte des éléments montrant que :
+## Frontières de responsabilité
 
-* une infrastructure tierce peut consommer les mesures runtime NeoMundi ;
-* le système en aval n’a pas besoin de reproduire la fonction de mesure de NeoMundi ;
-* NeoMundi et FactNotebook peuvent rester techniquement et fonctionnellement indépendants ;
-* les observations runtime peuvent devenir une source de preuve indépendante pour des fonctions de gouvernance en aval.
+| Couche | Responsabilité |
+| --- | --- |
+| Système IA | Produit la génération. |
+| NeoMundi | Mesure et rapporte le comportement runtime. |
+| FactNotebook | Reconstruit ce que les observations disponibles permettent à un tiers d'établir. |
+| Autorité humaine responsable | Interprète les preuves et prend toute décision d'assurance ou de gouvernance. |
 
-**En termes simples : NeoMundi mesure. FactNotebook reconstruit la preuve. Une autorité humaine décide.**
+## Ce que démontrent les cinq observations
 
-Le rôle de FactNotebook est décrit ici en termes de **preuve et d’objets de preuve**, l’assurance restant une couche de décision distincte en aval.
+Dans cette expérience, les artefacts publics montrent que cinq enregistrements runtime NeoMundi ont été produits, associés aux cinq cas du panel et exportés en JSONL. L'intégration FactNotebook dédiée a consommé cet export sans reproduire la fonction de mesure NeoMundi. Les deux systèmes ont conservé des fonctions et une autorité distinctes.
 
-Il s’agit d’un pilote d’interopérabilité terminé, et non d’une démonstration d’interopérabilité universelle.
+Cela démontre un chemin d'interopérabilité borné, et non une interopérabilité universelle, une validité générale de la mesure ou une préparation à la production.
 
----
+## Ce qu'ajoute la reconstruction partenaire
 
-## Vue d’ensemble
+FactNotebook a publié l'entrée précise [**FN-NEOMUNDI-CTPUBMEDQA-001**](https://github.com/factnotebook/public-reconstructions/tree/main/FN-NEOMUNDI-CTPUBMEDQA-001).
 
-Ce dépôt documente un pilote d’interopérabilité terminé entre **NeoMundi ControlTower** et **FactNotebook**.
+Elle ajoute une reconstruction rétrospective confrontant le déclaré et l'observé, conserve **NOT ASSESSABLE** en l'absence de canal d'observation, publie des engagements SHA-256 pour le contenu non public du paquet et fournit des jetons RFC-3161 pour la frontière d'ingestion et le manifeste.
 
-L’expérience examine si des observations runtime produites par NeoMundi peuvent être consommées par une infrastructure tierce indépendante afin de reconstruire des objets de preuve, tout en maintenant une séparation claire des responsabilités.
+L'estimation historique **8/9 (89 %) du poids probatoire** appartient à la méthodologie de reconstruction FactNotebook. Ce n'est ni une métrique, ni un score, ni un résultat de mesure NeoMundi. L'entrée liée, et non l'ensemble du registre partenaire, constitue la preuve partenaire pertinente.
 
-Le pilote porte sur **5 générations PubMedQA produites avec GPT-4o-2024-11-20**.
+## Preuves examinables
 
-## Architecture
+### Dépôt NeoMundi
 
-```
-Génération IA
-     ↓
-NeoMundi ControlTower
-mesure runtime
-     ↓
-export JSONL
-     ↓
-FactNotebook
-reconstruction de preuve
-     ↓
-flux d’évidence
-     ↓
-autorité humaine
-décision d’assurance
-```
+- [Panel de cinq cas](./data/panel/)
+- [Exports runtime](./data/runtime/)
+- [Résumé du run](./data/runtime/openai_gpt-4o-2024-11-20_factnotebook_pubmedqa_pilot_v01_20260725T181548Z_summary.json)
+- [Retour d'intégration](./docs/neomundi_pilot_integration_feedback.pdf)
+- [Guide des données](./data/README.md)
+- [Guide documentaire](./docs/README.md)
 
-**NeoMundi mesure le comportement runtime.**
+### Entrée partenaire
 
-**FactNotebook reconstruit ce qu’un tiers peut légitimement établir à partir des observations disponibles.**
+L'entrée expose son README, son manifeste, SHA256SUMS et les jetons RFC-3161 **ingest.tsr** et **manifest.tsr**. Elle publie les sorties et engagements de la reconstruction, pas son moteur, ses modèles ou ses règles de lecture. La reconstruction FactNotebook complète ne peut donc pas être réexécutée indépendamment à partir des seuls matériaux publiés.
 
-La décision finale d’assurance reste distincte de la mesure et de la reconstruction de preuve.
+## Limites d'intégrité et d'horodatage
 
-## Cas d’usage
+Le manifeste partenaire est explicitement **non signé**. Les hash d'artefacts non publics sont des engagements, pas des divulgations. RFC-3161 atteste qu'un blob existait à un instant, et non ce qu'il signifie ou si ses affirmations sont vraies. Le paquet publié n'établit ni immutabilité ni contre-signature, et son intégrité déclarée ne commence qu'au moment de la génération.
 
-FactNotebook reconstruit des **objets de preuve** à partir des observations et éléments de preuve disponibles.
+## Ce que cela n'établit pas
 
-Sans source runtime indépendante, cette reconstruction reposerait principalement sur les informations déclarées par le système évalué.
+Le pilote n'établit ni vérité médicale, ni validité générale du modèle, ni confirmation indépendante de chaque métadonnée, ni validité universelle des mesures NeoMundi, ni reproductibilité indépendante de la reconstruction FactNotebook, ni certification, conformité réglementaire, assurance, préparation à la production ou permission d'exécution. Les contrats RGC ultérieurs ne sont pas appliqués rétroactivement.
 
-Dans ce pilote, NeoMundi a fourni des observations runtime que FactNotebook a pu ingérer comme source de preuve indépendante.
+## Rapports
 
-L’objectif n’était pas de fusionner les deux infrastructures, mais de tester leur capacité à s’articuler tout en conservant des fonctions et responsabilités distinctes.
-
-## Expérience
-
-* **Infrastructure partenaire :** FactNotebook
-* **Couche de mesure :** NeoMundi ControlTower
-* **Dataset :** mini-panel PubMedQA
-* **Modèle :** GPT-4o-2024-11-20
-* **Cas :** 5
-* **Workflow :** `stream_then_govern_v3`
-* **Observations réussies :** 5 / 5
-* **Lignes en erreur :** 0
-* **Format d’export :** JSONL
-* **Intégration :** connecteur FactNotebook dédié
-
-L’export JSONL contenait des signaux runtime, des sorties runtime, des identifiants de trace, des horodatages et les métadonnées associées.
-
-FactNotebook indique que l’ingestion a été déterministe et n’a nécessité aucun retraitement manuel.
-
-## Séparation des responsabilités
-
-| Couche           | Responsabilité                             |
-| ---------------- | ------------------------------------------ |
-| Système IA       | Produit la génération                      |
-| NeoMundi         | Mesure et rapporte le comportement runtime |
-| FactNotebook     | Reconstruit des objets de preuve           |
-| Autorité humaine | Prend la décision finale d’assurance       |
-
-La mesure runtime rapporte ce qui a été observé.
-
-Elle ne constitue pas, à elle seule, un verdict final.
-
-## Interopérabilité observée
-
-Le pilote montre que :
-
-* les exports runtime NeoMundi ont pu être ingérés par une infrastructure indépendante ;
-* les observations ont pu être rattachées à des générations individuelles ;
-* FactNotebook a pu reconstruire des objets de preuve sans produire lui-même les mesures runtime ;
-* NeoMundi et FactNotebook ont conservé des rôles fonctionnels distincts ;
-* les observations runtime ont pu constituer une source de preuve indépendante au-delà de l’auto-déclaration du modèle.
-
-FactNotebook estime que **8/9 (89 %) du poids probatoire** utilisé dans sa reconstruction provenait d’un témoin indépendant plutôt que de l’auto-déclaration du modèle.
-
-## Exemple concret
-
-Un flag NeoMundi de sur-affirmation a été consommé par FactNotebook comme observation runtime indépendante.
-
-FactNotebook a utilisé cette observation pour reconstruire une tension liée à l’Article 15 sans implémenter son propre détecteur runtime.
-
-> **NeoMundi produit des observations comportementales. FactNotebook transforme ces observations en objets de preuve.**
-
-## Ce que ce pilote établit — et n’établit pas
-
-### Il établit, dans le périmètre de cette expérience
-
-* l’ingestion réussie des exports runtime NeoMundi par FactNotebook ;
-* un traitement aval déterministe sans retraitement manuel ;
-* le maintien de responsabilités fonctionnelles distinctes ;
-* l’utilisation des observations runtime NeoMundi comme source probatoire indépendante ;
-* une articulation technique entre mesure et reconstruction de preuve en aval.
-
-### Il n’établit pas
-
-* une interopérabilité universelle entre toutes les infrastructures ;
-* une validité universelle de la couche de mesure NeoMundi ;
-* la confirmation indépendante de chaque métadonnée ;
-* un verdict final d’assurance produit par NeoMundi ;
-* une généralisation au-delà de ce pilote sans réplications supplémentaires.
-
-## Limites
-
-L’expérience a identifié plusieurs limites :
-
-* l’identité du modèle était déclarée mais non confirmée indépendamment ;
-* certains champs nécessitaient encore une interprétation ;
-* la sémantique de `severity`, `category` et de certains seuils nécessitait une documentation plus explicite ;
-* aucun événement de supervision humaine en aval n’était inclus dans l’export runtime ;
-* certains horodatages pouvaient être absents ;
-* un schéma d’interopérabilité versionné restait nécessaire au moment du pilote.
-
-Le pilote doit donc être interprété comme une expérience d’intégration terminée nécessitant des réplications supplémentaires avant toute généralisation plus large.
-
-## Contenu du dépôt
-
-```
-.
-├── README.md
-├── data/
-│   ├── README.md
-│   ├── panel/
-│   │   ├── README.md
-│   │   └── fichiers d’entrée du pilote PubMedQA
-│   └── runtime/
-│       ├── README.md
-│       ├── results.csv
-│       ├── results.jsonl
-│       └── summary.json
-└── docs/
-    ├── README.md
-    └── neomundi_pilot_integration_feedback.pdf
-```
-
-Le dépôt vise à rendre l’expérience **inspectable**, sans exposer les mécanismes internes propriétaires de mesure de NeoMundi.
-
----
-
-## Statut
-
-**Pilote d’interopérabilité terminé et documenté publiquement.**
-
-Les résultats apportent des éléments montrant qu’une infrastructure tierce indépendante peut consommer des observations runtime NeoMundi tout en maintenant, de part et d’autre, une architecture, une fonction et une autorité distinctes.
-
-Des réplications supplémentaires sont nécessaires avant toute généralisation plus large.
-
----
-
-## Ressource
-
-### FactNotebook
-
-**Patrick Juvet Etoua** — Researching evidence-based AI governance. Building FactNotebook. Author of Governance Falsifiability Infrastructure.
-[LinkedIn](https://www.linkedin.com/in/patrick-juvet-etoua-697847a3/)
-
-* [Rapport public — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/)
-* [Rapport public — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/index.fr.html)
-* [Detailed evidence review — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.html)
-* [Revue détaillée — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.fr.html)
-
-### NeoMundi
-
-* [NeoMundi Research](https://neomundi.org)
-* [ControlTower](https://controltower.neomundi.io/welcome)
-* [Runtime Interoperability Contract](https://github.com/neomundi-io/runtime-interoperability-contract)
-* [NeoMundi AI Observatory](https://github.com/neomundi-io/neomundi-ai-observatory)
+- [Entrée de reconstruction partenaire](https://github.com/factnotebook/public-reconstructions/tree/main/FN-NEOMUNDI-CTPUBMEDQA-001)
+- [Public report — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/)
+- [Rapport public — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/index.fr.html)
+- [Detailed review — English](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.html)
+- [Revue détaillée — Français](https://factnotebook.com/audits/neomundi/neomundi-controltower-pubmedqa-pilot-v01/review.fr.html)
